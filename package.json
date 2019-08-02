@@ -11,7 +11,8 @@
     "test": "mocha ./test/test.js",
     "hint": "jshint ./lib/*.js",
     "build-test": "browserify ./test/test.js > ./test/bundle.js",
-    "build": "browserify . -s shp > ./dist/shp.js",
+    "build": "node build-warning.js",
+    "build-override": "browserify . -s shp > ./dist/shp.js",
     "min": "browserify . -s shp | uglifyjs -mc > ./dist/shp.min.js"
   },
   "author": "Calvin Metcalf",
