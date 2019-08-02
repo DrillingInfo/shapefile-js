@@ -1,5 +1,10 @@
 # Shapefile.js
 
+**<span style="color:red">WARNING:<span>** ./dist/shp.js has been [patched directly](https://github.com/DrillingInfo/shapefile-js/pull/2/commits/2d16feaa910279d063b58b1bfb135a3a40e7d7bd) to relax the validation of shapefiles in two of the modules it relies on (proj4, wkt-parser). To create a new build and override these changes run the following npm script:
+
+		npm run build-override
+<hr>
+
 If you are having encoding issues in internet explorer please include [this script](https://cdn.rawgit.com/calvinmetcalf/text-encoding/4aff951959085f74a5872aeed8d79ec95b6c74c3/lib/encoding-indexes.js) as well.
 
 Redoing all of this in modern JS. Promises, Typed Arrays, other hipster things, I wouldn't say it's based on [RandomEtc's version](https://github.com/RandomEtc/shapefile-js) as much as inspired by it as there is 0 code shared and I really only read the binary ajax part of his (hence why my function has the same name, they are otherwise not related). My sources were:
@@ -21,7 +26,7 @@ Redoing all of this in modern JS. Promises, Typed Arrays, other hipster things, 
 For use with [browserify](http://browserify.org/), [webpack](https://webpack.github.io/):
 
     npm install shpjs --save
-    
+
 Or include directly in your webpage from:
 
     https://unpkg.com/shpjs@latest/dist/shp.js
